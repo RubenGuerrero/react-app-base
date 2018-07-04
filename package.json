@@ -12,12 +12,17 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "eslint ./src"
+    "lint": "eslint"
   },
   "lint-staged": {
-    "*.{js,json,md}": [
+    "src/**/*.{js,json,css,md}": [
       "prettier --write",
       "git add"
+    ],
+    "src/**/*.js": [
+      "eslint --fix",
+      "git add",
+      "jest --bail --findRelatedTests"
     ]
   },
   "husky": {

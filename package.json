@@ -21,8 +21,7 @@
     ],
     "src/**/*.js": [
       "eslint --fix",
-      "git add",
-      "jest --bail --findRelatedTests"
+      "git add"
     ]
   },
   "husky": {
